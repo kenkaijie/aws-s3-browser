@@ -4,6 +4,11 @@ import HelloDecoratorComponent from "./components/HelloDecorator.vue";
 
 new Vue({
     el: "#app",
+    components: {
+        HelloComponent,
+        HelloDecoratorComponent
+    },
+    data: function() { return { name: "World" }; },
     template: `
     <div>
         Name: <input v-model="name" type="text">
@@ -12,10 +17,5 @@ new Vue({
         <h1>Hello Decorator Component</h1>
         <hello-decorator-component :name="name" :initialEnthusiasm="5" />
         </div>
-    `,
-    data: function() { return { name: "World" }; },
-    components: {
-        HelloComponent,
-        HelloDecoratorComponent
-    }
+    `
 });

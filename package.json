@@ -7,7 +7,8 @@
     "compile": "electron-webpack",
     "dist": "yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
-    "lint": "yarn eslint ./src/**/* --ext .ts,.js,.vue"
+    "lint": "yarn eslint ./src/**/* --ext .ts,.js,.vue",
+    "lint:fix": "yarn eslint --fix ./src/**/* --ext .ts,.js,.vue"
   },
   "dependencies": {
     "source-map-support": "^0.5.16"

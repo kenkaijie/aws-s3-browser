@@ -1,9 +1,15 @@
 <template>
-    <div>
-        <div class="greeting">Hello {{name}}{{exclamationMarks}}</div>
-        <button @click="decrement">-</button>
-        <button @click="increment">Inc +</button>
+  <div>
+    <div class="greeting">
+      Hello {{ name }}{{ exclamationMarks }}
     </div>
+    <button @click="decrement">
+      -
+    </button>
+    <button @click="increment">
+      Inc +
+    </button>
+  </div>
 </template>
 
 <script lang="ts">
@@ -15,6 +21,11 @@ export default Vue.extend({
             enthusiasm: this.initialEnthusiasm,
         }
     },
+    computed: {
+        exclamationMarks(): string {
+            return Array(this.enthusiasm + 1).join('!');
+        }
+    },
     methods: {
         increment() { this.enthusiasm++; },
         decrement() {
@@ -22,11 +33,6 @@ export default Vue.extend({
                 this.enthusiasm--;
             }
         },
-    },
-    computed: {
-        exclamationMarks(): string {
-            return Array(this.enthusiasm + 1).join('!');
-        }
     }
 });
 </script>
