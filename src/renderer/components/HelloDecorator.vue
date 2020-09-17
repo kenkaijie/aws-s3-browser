@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <div class="greeting">
-      Hello {{ name }}{{ exclamationMarks }}
+  <el-card class="box-card greeting">
+    <div slot="header" class="clearfix">
+      <span>Hello {{ name }}{{ exclamationMarks }}</span>
     </div>
-    <button @click="decrement">
-      -
-    </button>
-    <button @click="increment">
-      +
-    </button>
-  </div>
+    <div>
+      <el-button @click="decrement">-</el-button>
+      <el-button @click="increment">Inc +</el-button>
+    </div>
+  </el-card>
 </template>
 
 <script lang="ts">
