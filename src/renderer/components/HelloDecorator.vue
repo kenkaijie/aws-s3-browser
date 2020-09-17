@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <div class="greeting">
-      Hello {{ name }}{{ exclamationMarks }}
+  <el-card class="box-card greeting">
+    <div slot="header" class="clearfix">
+      <span>Hello {{ name }}{{ exclamationMarks }}</span>
     </div>
-    <button @click="decrement">
-      -
-    </button>
-    <button @click="increment">
-      +
-    </button>
-  </div>
+    <div>
+      <el-button @click="decrement">-</el-button>
+      <el-button @click="increment">Inc +</el-button>
+    </div>
+  </el-card>
 </template>
 
 <script lang="ts">
@@ -33,8 +31,10 @@ export default class HelloDecorator extends Vue {
 }
 </script>
 
-<style>
+<style lang="scss">
+$greet-font-size: 50px; 
+
 .greeting {
-    font-size: 20px;
+    font-size: $greet-font-size;
 }
 </style>
