@@ -25,3 +25,7 @@ yarn lint
 # lint with --fix
 yarn lint:fix
 ```
+
+### Unit Testing
+
+Unit testing is done via jest. Tests should be placed in the test folder with names ending in the extension `*.test.ts`.
